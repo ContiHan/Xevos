@@ -14,6 +14,11 @@ namespace XevosWebApp.Pages.People
     public class IndexModel : PageModel
     {
         private readonly XevosWebApp.Data.AppDbContext _context;
+        public string? FirstNameSort { get; set; }
+        public string? LastNameSort { get; set; }
+        public string? DateSort { get; set; }
+        public string? CurrentSort { get; set; }
+        public string? CurrentFilter { get; set; }
 
         public IndexModel(XevosWebApp.Data.AppDbContext context)
         {
@@ -24,10 +29,10 @@ namespace XevosWebApp.Pages.People
 
         public async Task OnGetAsync(string sortOrder, string searchString)
         {
-            ViewData["FirstNameSort"] = sortOrder == "FirstName" ? "FirstNameDesc" : "FirstName";
-            ViewData["LastNameSort"] = sortOrder == "LastName" ? "LastNameDesc" : "LastName";
-            ViewData["DateSort"] = sortOrder == "Date" ? "DateDesc" : "Date";
-            ViewData["CurrentFilter"] = searchString;
+            FirstNameSort = sortOrder == "FirstName" ? "FirstNameDesc" : "FirstName";
+            LastNameSort = sortOrder == "LastName" ? "LastNameDesc" : "LastName";
+            DateSort = sortOrder == "Date" ? "DateDesc" : "Date";
+            CurrentFilter = searchString;
 
             var people = from person
                          in _context.People
