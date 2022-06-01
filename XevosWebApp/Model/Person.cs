@@ -17,6 +17,7 @@ namespace XevosWebApp.Model
         public string? Prijmeni { get; set; }
         [Required]
         [DisplayName("Datum")]
+        [DataType(DataType.Date)]
         public DateTime Date { get; set; }
     }
 }
