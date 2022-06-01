@@ -1,10 +1,42 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+	ViewData["Title"] = "Home page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+	<h1 class="display-4">Základní test ASP.NET programátora</h1>
+	<p>
+		Časový limit: 180 minut
+	</p>
+	<div class="mt-5 text-start">
+		<h2 class="text-center">Zadání úkolu</h2>
+		<p>
+			Vašim úkolem bude vytvořit jednoduchou validní webovou aplikaci na níž bude možné provést následující operace:
+		</p>
+		<h3>Stažení dat</h3>
+		<p>
+			Aplikace si ze vzdáleného zdroje stáhne data, které si uloží do své lokální databáze. Toto stažení by mělo být možné vyvolat vždy uživatelem tj. zaktualizování dat ze zdroje.
+		</p>
+		<h3>Výpis dat</h3>
+		<p>
+			Data, která má aplikace uložená ve své lokální databázi zobrazí v tabulce. Jestli pro tabulku využijete již funkční hotové řešení nebo si napíšete vlastní je zcela na vašem uvážení.
+		</p>
+		<h3>Filtrace dat</h3>
+		<p>
+			Datagrid by měl mít možnost filtrovat veškerá data která jsou v něm obsažená.
+		</p>
+		<h3>Řazení dat</h3>
+		<p>
+			Datagrid by měl mít možnost všechny sloupce řadit sestupně/vzestupně.
+		</p>
+		<h3>Editace lokálních dat</h3>
+		<p>
+			Každý záznam by mělo být možné editovat. Editované data se uloží do lokální databáze.
+		</p>
+		<h3>Mazání dat</h3>
+		<p>
+			Každý záznam bude možné odebrat(smazat) z lokální databáze.
+		</p>
+	</div>
 </div>

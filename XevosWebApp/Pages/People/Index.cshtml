@@ -5,9 +5,9 @@
 	ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Přehled lidí</h1>
 
-<form asp-page="./Index" method="get">
+<form asp-page="./Index" method="get" class="mt-5">
 	<div class="row">
 		<div class="col-6">
 			<input type="text" name="searchString" value="@ViewData["CurrentFilter"]" />
